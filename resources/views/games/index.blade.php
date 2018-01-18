@@ -1,4 +1,6 @@
+
 @extends('layouts.master')
+<link href="{{ asset('/css/app.css') }}" rel="stylesheet"/>
 @section('content')
 
 @if( auth()->check() )
