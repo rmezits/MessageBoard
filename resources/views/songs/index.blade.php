@@ -1,11 +1,11 @@
 @extends('layouts.master')
-
 @section('content')
+
 @if( auth()->check() )
         <p>
             <a href="/songs/create">Submit Song thread</a>
         </p>
-    @endif
+@endif
 <ul>
 @foreach($songs as $song)
     <div class="col-12 mb-3">

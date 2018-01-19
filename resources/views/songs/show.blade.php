@@ -25,7 +25,7 @@
             @endforeach
         </ul>
     </div>
-
+    @if( auth()->check() )
     <div class="addcomment">
         <div class="card-block">
             <form method="POST" action="/songs/{{ $song->id }}/comments">
@@ -41,5 +41,5 @@
             </form>
         </div>
     </div>
-
+    @endif
 @endsection

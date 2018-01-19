@@ -40,6 +40,8 @@ Route::post('games', 'GamesController@store');
 
 Route::post('games/{game}/reviews', 'GameCommentController@store');
 
+Route::get('/reviews', 'GameCommentController@index');
+
 //Songs
 Route::get('songs', 'SongsController@index');
 
@@ -51,7 +53,7 @@ Route::post('songs', 'SongsController@store');
 
 Route::post('songs/{song}/comments', 'SongCommentController@store');
 
-
+Route::get('/comments', 'SongCommentController@index');
 
  
 

@@ -8,8 +8,15 @@ use project\GameComment;
 
 class GameCommentController extends Controller
 {
+    public function index()
+    {
+        $reviews = GameComment::latest()->get();
+        return view('reviews.index', ['reviews' => $reviews]);
+    }
+    
     public function store(Game $game)
     {
+        
         $this->validate(request(), [
             'body' => 'required|min:3'
         ]);

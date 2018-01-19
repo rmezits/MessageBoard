@@ -22,9 +22,9 @@ class CreateUsersTable extends Migration
             $table->string('password', 60); // VARCHAR 60
             $table->text('about')->nullable(); // TEXT 64K + null            
             // Integer + unsigned 4Bytes
-            $table->integer('favorite')->unsigned();
+            $table->integer('favorite')->nullable();
             $table->rememberToken('rememberToken');
-            $table->integer('isAdmin');
+            $table->integer('isAdmin')->nullable();
             $table->timestamps(); // timestamps (Laravel requires)
         });
 
