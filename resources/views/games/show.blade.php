@@ -17,6 +17,11 @@
         <h4>What Gamers Are Saying</h4>
         <ul class="list-group">
             @foreach($game->comments as $comment)
+                @if( auth()->user()->isAdmin === 1 )
+                    <button><a href="{{URL::to('/deletegc/'.$comment->id)}}">Admin Delete</a></button>
+                @elseif( auth()->id() === $comment->user_id )
+                    <button><a href="{{URL::to('/deletegc/'.$comment->id)}}">Delete</a></button>
+                @endif
                 <li class="list-group-item">{{ $comment->body }}
                     <hr>
                     <small class="text-primary">posted {{$comment->created_at->diffForHumans()}} by

@@ -52,8 +52,4 @@ class User extends Authenticatable
         return $this->hasMany(SongComment::class);
     }
     
-    public function isAdmin()
-    {
-        return $this->admin;
-    }
 }

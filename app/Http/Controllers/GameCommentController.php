@@ -26,4 +26,13 @@ class GameCommentController extends Controller
         
         return back();
     }
+    
+    public function delete($id)
+    {
+
+        GameComment::find($id)->delete();
+
+        return back();
+
+    }
 }

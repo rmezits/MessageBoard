@@ -24,4 +24,14 @@ class SongCommentController extends Controller
         
         return back();
     }
+    
+    public function delete($id)
+    {
+
+        SongComment::find($id)->delete();
+
+        return back();
+
+    }
+    
 }

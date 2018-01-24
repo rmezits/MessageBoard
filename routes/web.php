@@ -56,6 +56,11 @@ Route::post('songs/{song}/comments', 'SongCommentController@store');
 Route::get('/comments', 'SongCommentController@index');
 
  
+//delete
+
+Route::get('/deletegc/{id}','GameCommentController@delete');
+
+Route::get('/deletesc/{id}','SongCommentController@delete');
 
 
 
