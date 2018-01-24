@@ -10,7 +10,7 @@ class GameCommentController extends Controller
 {
     public function index()
     {
-        $reviews = GameComment::latest()->get();
+        $reviews = GameComment::orderBy('id','desc');
         return view('reviews.index', ['reviews' => $reviews]);
     }
     
